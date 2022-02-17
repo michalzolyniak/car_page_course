@@ -1,0 +1,28 @@
+<html>
+<body>
+<select id="langselector" onchange="loadlang()">
+  <option value="en">English</option>
+  <option value="fr">French</option>
+</select>
+<p></p>
+<iframe id="contents" src="https://jsfiddle.net/q2nw8o35/" width="1366" height="768" scrolling="yes">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+<script>
+function loadlang()
+  {
+  var lng = document.getElementById("langselector").value;
+  var cnt = document.getElementById("contents");
+  switch (lng)
+    {
+    case "en":
+      cnt.src = "https://jsfiddle.net/q2nw8o35/";
+    break;
+    case "fr":
+      cnt.src = "https://jsfiddle.net/jmn8c9tj/";
+    break;
+    }
+  }
+</script>
+</body>
+</html>
